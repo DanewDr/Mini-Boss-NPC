@@ -114,7 +114,7 @@ namespace MiniBossNPC.NPCs
 				return "You know, I should probably go to " + Main.npc[stylist].GivenName + " and get a haircut, but maybe not yet.";
 			}
 			int wizard = NPC.FindFirstNPC(NPCID.Wizard);
-			if (wizard >= 0 && Main.rand.Next (7)) == 0)
+			if (wizard >= 0 && Main.rand.Next (7) == 0)
 			{
 				return "That " + Main.npc[wizard].GivenName + "has got nothing an me";
 			}		
@@ -185,8 +185,10 @@ namespace MiniBossNPC.NPCs
 				shop.item[nextSlot].SetDefaults(mod.ItemType("ForbiddenCharm"));
 				nextSlot++;
 				shop.item[nextSlot].SetDefaults(ItemID.NightKey);
+				shop.item[nextSlot].value = 20000;				
                 nextSlot++;
 				shop.item[nextSlot].SetDefaults(ItemID.LightKey);
+				shop.item[nextSlot].value = 20000;			
                 nextSlot++;
 			}
 			if (NPC.downedPirates)
@@ -245,7 +247,7 @@ namespace MiniBossNPC.NPCs
 			}
 			if (NPC.downedBoss3)
 			{
-				shop.item[nextSlot].SetDefault(mod.ItemType("Skully"));
+				shop.item[nextSlot].SetDefaults(mod.ItemType("Skully"));
 				nextSlot++;
 			}	
 		}	
