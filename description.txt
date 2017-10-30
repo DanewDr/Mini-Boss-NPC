@@ -6,7 +6,7 @@ I do plan on adding modded mini and event bosses to the NPC but that will come l
 Hope you enjoy the mod!
 
 Changelog:
-v0.1.1: Fixed changlog for previous release (oops)
+v0.1.1: Fixed changelog for previous release (oops)
 	      Added new Arch Wizard quotes and removed two
 	      Added new Arch Wizard name
 	      Keys of light and night now cost money
