@@ -9,7 +9,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Dungeon Skull");
-			Tooltip.SetDefault("Summons a Dungeon Gaurdian");
+			Tooltip.SetDefault("Summons a Dungeon Guardian");
 		}
 		public override void SetDefaults()
 		{
@@ -25,7 +25,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, NPCID.DungeonGaurdian);
+			NPC.SpawnOnPlayer(player.whoAmI, NPCID.DungeonGuardian);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}
