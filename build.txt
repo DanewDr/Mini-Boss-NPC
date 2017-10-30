@@ -1,0 +1,12 @@
+author = Danew Dr
+
+version = 0.1.0
+
+displayName = Danew's Mini-Boss NPC
+
+homepage = https://forums.terraria.org/index.php?threads/danews-mini-boss-npc.63087/
+hideCode = true
+hideResources = true
+includeSource = true
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+includePDB = true

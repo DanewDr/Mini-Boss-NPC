@@ -1,0 +1,9 @@
+Danew's Mini Boss NPC Adds A Brand New NPC To The Game: The Arch Wizard!
+He Sells Summoning Items for various vanilla Mini Bosses And Event Bosses (So, kinda like Fargo's Mutant)
+Since there isn't an official definition for a 'Mini Boss' most of the summon items are for enemies that can prove to be quite the challenge at the point they are fought.
+If there are any other enemies/bosses you feel need to be added be sure to let me know on the forum thread.
+I do plan on adding modded mini and event bosses to the NPC but that will come later
+Hope you enjoy the mod!
+
+Changelog:
+v0.1.0 First release with arch wizard and summons for Bone Lee, 
