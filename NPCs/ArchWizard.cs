@@ -116,7 +116,7 @@ namespace MiniBossNPC.NPCs
 			int wizard = NPC.FindFirstNPC(NPCID.Wizard);
 			if (wizard >= 0 && Main.rand.Next (7) == 0)
 			{
-				return "That " + Main.npc[wizard].GivenName + "has got nothing an me";
+				return "That " + Main.npc[wizard].GivenName + " has got nothing an me";
 			}		
 			switch (Main.rand.Next(5))
 			{
