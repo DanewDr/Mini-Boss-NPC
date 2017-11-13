@@ -9,7 +9,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Karate Skull");
-			Tooltip.SetDefault("Summons Bone Lee");
+			Tooltip.SetDefault("Summons Bone Lee\nWill try to run away if not in the dungeon");
 		}
 		public override void SetDefaults()
 		{
@@ -25,7 +25,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, NPCID.BoneLee);
+			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.BoneLee);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

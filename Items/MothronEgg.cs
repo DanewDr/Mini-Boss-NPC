@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Mothron Egg");
-			Tooltip.SetDefault("Summons Mothron" + Environment.NewLine + "Can only be used during a Solar Eclipse");
+			Tooltip.SetDefault("Summons Mothron" + Environment.NewLine + "Will run away if it is not a Solar Eclipse");
 		}
 		public override void SetDefaults()
 		{
@@ -26,7 +26,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, NPCID.Mothron);
+			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.Mothron);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

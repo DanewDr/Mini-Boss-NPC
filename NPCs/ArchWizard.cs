@@ -191,6 +191,9 @@ namespace MiniBossNPC.NPCs
 				shop.item[nextSlot].value = 20000;			
                 nextSlot++;
 			}
+			if (NPC.downedClown)
+				shop.item[nextSlot].SetDefaults(mod.ItemType("ClownBall"));
+				nextSlot++;
 			if (NPC.downedPirates)
 			{
 				shop.item[nextSlot].SetDefaults(mod.ItemType("PirateFlag"));

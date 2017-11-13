@@ -6,11 +6,16 @@ I do plan on adding modded mini and event bosses to the NPC but that will come l
 Hope you enjoy the mod!
 
 Changelog:
+v0.1.2: Improved Dungeon Skull sprite
+	Added Clown spawn
+	All event/mini-bosses now spawn directly on top of the player (this should fix all despawning bugs)
+	Updated tooltips to warn the player of despawning and running away
+	Fixed martian saucer never spawning
 v0.1.1: Fixed changelog for previous release (oops)
-	      Added new Arch Wizard quotes and removed two
-	      Added new Arch Wizard name
-	      Keys of light and night now cost money
-	      Added Dungeon Guardian spawn (terrible sprite)
-      	Added mod icon
-  	
+	Added new Arch Wizard quotes and removed two
+	Added new Arch Wizard name
+	Keys of light and night now cost money
+	Added Dungeon Guardian spawn (terrible sprite)
+	Thought I added mod icon but I didn't
+	
 v0.1.0: First release with Arch Wizard and summons for Bone Lee, Paladin, Ice Golem, Sand Elemental, Wyvern, Mothron, Red Devil, Dark Mage, Ogre, Goblin Summoner, Flying Dutchman, Martian Saucer, Mourning Wood, Pumpking, Everscream, Santa-NK1 and Ice Queen

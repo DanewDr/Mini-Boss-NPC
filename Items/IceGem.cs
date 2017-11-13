@@ -9,7 +9,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Ice Gem");
-			Tooltip.SetDefault("Summons the Ice Queen");
+			Tooltip.SetDefault("Summons the Ice Queen\nWill run away during the day");
 		}
 		public override void SetDefaults()
 		{
@@ -25,7 +25,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, NPCID.IceQueen);
+			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.IceQueen);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

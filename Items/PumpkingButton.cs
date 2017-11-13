@@ -9,7 +9,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Pumpking's Button");
-			Tooltip.SetDefault("Summons the Pumpking");
+			Tooltip.SetDefault("Summons the Pumpking\nWill run away during the day");
 		}
 		public override void SetDefaults()
 		{
@@ -25,7 +25,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, NPCID.Pumpking);
+			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.Pumpking);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

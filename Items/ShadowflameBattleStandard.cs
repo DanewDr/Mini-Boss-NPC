@@ -26,7 +26,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, NPCID.GoblinSummoner);
+			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.GoblinSummoner);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

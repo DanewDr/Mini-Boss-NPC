@@ -9,7 +9,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Tree Branch");
-			Tooltip.SetDefault("Summons an Everscream");
+			Tooltip.SetDefault("Summons an Everscream\nWill run away if it BECOMES day");
 		}
 		public override void SetDefaults()
 		{
@@ -25,7 +25,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, NPCID.Everscream);
+			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.Everscream);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

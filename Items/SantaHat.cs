@@ -9,7 +9,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Santa NK1's Hat");
-			Tooltip.SetDefault("Summons Santa NK1");
+			Tooltip.SetDefault("Summons Santa NK1\nWill run away if it BECOMES day");
 		}
 		public override void SetDefaults()
 		{
@@ -25,7 +25,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, NPCID.SantaNK1);
+			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.SantaNK1);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}
