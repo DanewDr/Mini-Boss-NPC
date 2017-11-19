@@ -1,11 +1,15 @@
 Danew's Mini Boss NPC Adds A Brand New NPC To The Game: The Arch Wizard!
-He Sells Summoning Items for various vanilla Mini Bosses And Event Bosses (So, kinda like Fargo's Mutant)
+He Sells Summoning Items for various Mini-Bosses And Event Bosses (So, kinda like Fargo's Mutant)
+
+Currently Supported mods: Spirit
+
 Since there isn't an official definition for a 'Mini Boss' most of the summon items are for enemies that can prove to be quite the challenge at the point they are fought.
 If there are any other enemies/bosses you feel need to be added be sure to let me know on the forum thread.
-I do plan on adding modded mini and event bosses to the NPC but that will come later
 Hope you enjoy the mod!
 
 Changelog:
+v0.2.0: Spirit Mod support (Glade Wraith, Flesh Golem, Blood Gazer, R'lyheian, Jabberwocky, Snow Monger and lavavent)
+	Added Rare Creature Collecter, an NPC that sells summons for all rare creatures: The Bride, Commando Skeleton, Crawdad (both varients), Doctor Bones, Giant Shelly (both varients), Goblin Scout, The Groom, Lost Girl (might remove later), Mimic (all varients), Moth, Nymph, Pinky, Rainbow Slime, Rune Wizard, Salamander (all varients), Dungeon Slime, Sniper Skeleton, Tactical Skeleton and Time 
 v0.1.2: Improved Dungeon Skull sprite
 	Added Clown spawn
 	All event/mini-bosses now spawn directly on top of the player (this should fix all despawning bugs)

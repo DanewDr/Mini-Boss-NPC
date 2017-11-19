@@ -1,7 +1,6 @@
 author = Danew Dr
 
-version = 0.1.2
-
+version = 0.2.0
 displayName = Danew's Mini-Boss NPC
 
 homepage = https://forums.terraria.org/index.php?threads/danews-mini-boss-npc.63087/
