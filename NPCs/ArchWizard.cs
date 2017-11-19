@@ -169,6 +169,13 @@ namespace MiniBossNPC.NPCs
 
 		public override void SetupShop(Chest shop, ref int nextSlot)
 		{
+			if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+			{
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SpWraithHead"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SpFleshHand"));
+				nextSlot++;
+			}				
 			if (DD2Event.DownedInvasionT1)
 			{
 				shop.item[nextSlot].SetDefaults(mod.ItemType("Tiara"));
@@ -190,7 +197,29 @@ namespace MiniBossNPC.NPCs
 				shop.item[nextSlot].SetDefaults(ItemID.LightKey);
 				shop.item[nextSlot].value = 20000;			
                 nextSlot++;
+				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+				{
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("GraniteKey"));
+					nextSlot++;
+					shop.item[nextSlot].value = 20000;				
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("MarbleKey"));
+					nextSlot++;			
+					shop.item[nextSlot].value = 20000;				
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("SpiritKey"));
+					nextSlot++;		
+					shop.item[nextSlot].value = 20000;				
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SpBloodyEye"));
+					nextSlot++;
+				}					
 			}
+			if (NPC.downedFrost)
+			{
+				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SpSnowPearl"));
+					nextSlot++;
+				}
+			}				
 			if (NPC.downedClown)
 				shop.item[nextSlot].SetDefaults(mod.ItemType("ClownBall"));
 				nextSlot++;
@@ -199,11 +228,26 @@ namespace MiniBossNPC.NPCs
 				shop.item[nextSlot].SetDefaults(mod.ItemType("PirateFlag"));
 				nextSlot++;
 			}
+			if (Main.hardMode)
+			{	
+				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SpBabyRlyheian"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SpJabberwockyHead"));
+					nextSlot++;
+				}	
+			}				
 			if (NPC.downedMechBossAny)
 			{	
 				shop.item[nextSlot].SetDefaults(mod.ItemType("DevilTail"));
-				nextSlot++;		
-			}
+				nextSlot++;	
+				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SpLavaventArm"));
+					nextSlot++;
+				}					
+			}			
 			if (DD2Event.DownedInvasionT2)
 			{	
 				shop.item[nextSlot].SetDefaults(mod.ItemType("OgreBuckle"));
