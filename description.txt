@@ -8,8 +8,12 @@ If there are any other enemies/bosses you feel need to be added be sure to let m
 Hope you enjoy the mod!
 
 Changelog:
-v0.2.0: Spirit Mod support (Glade Wraith, Flesh Golem, Blood Gazer, R'lyheian, Jabberwocky, Snow Monger and lavavent)
-	Added Rare Creature Collecter, an NPC that sells summons for all rare creatures: The Bride, Commando Skeleton, Crawdad (both varients), Doctor Bones, Giant Shelly (both varients), Goblin Scout, The Groom, Lost Girl (might remove later), Mimic (all varients), Moth, Nymph, Pinky, Rainbow Slime, Rune Wizard, Salamander (all varients), Dungeon Slime, Sniper Skeleton, Tactical Skeleton and Time 
+v0.2.0: Spirit Mod support (Glade Wraith, Flesh Golem, Blood Gazer, R'lyheian, Jabberwocky, Snow Monger and Lavavent. Also added keys to the shop)
+	Added Rare Creature Collecter, an NPC that sells summons for all rare creatures: The Bride, Commando Skeleton, Crawdad (both varients), Doctor Bones, Giant Shelly (both varients), Goblin Scout, The Groom, Lost Girl (might remove later), Mimic (all varients), Moth, Nymph, Pinky, Rainbow Slime, Rune Wizard, Salamander (all varients), Dungeon Slime, Sniper Skeleton, Tactical Skeleton, Tim, Pigrons, Enchanted Weapons and Medusa
+	Tremor Mod support (Dark Druid, Almagron, Violem and Paradox Titan. Also added keys to the shop)
+	Added Pirate Captain summon to the Arch Wizard's shop
+	Thorium support (Added keys to the shop)
+	Moved Clown and Bone Lee summon to RCC's shop
 v0.1.2: Improved Dungeon Skull sprite
 	Added Clown spawn
 	All event/mini-bosses now spawn directly on top of the player (this should fix all despawning bugs)
