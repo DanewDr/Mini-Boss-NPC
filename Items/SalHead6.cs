@@ -11,7 +11,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Salamander Head");
-			Tooltip.SetDefault("Summons a Salamander");
+			Tooltip.SetDefault("Summons a Salamander\nWill try to run away during the day");
 		}
 		public override void SetDefaults()
 		{

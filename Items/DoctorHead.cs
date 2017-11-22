@@ -9,7 +9,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Doctor Head");
-			Tooltip.SetDefault("Summons Doctor Bones");
+			Tooltip.SetDefault("Summons Doctor Bones\nWill try to run away during the day");
 		}
 		public override void SetDefaults()
 		{

@@ -9,7 +9,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Groom Head");
-			Tooltip.SetDefault("Summons the Groom");
+			Tooltip.SetDefault("Summons the Groom\nWill try to run away during the day");
 		}
 		public override void SetDefaults()
 		{

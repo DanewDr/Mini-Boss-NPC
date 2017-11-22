@@ -11,7 +11,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Crab Claw");
-			Tooltip.SetDefault("Summons a Crawdad");
+			Tooltip.SetDefault("Summons a Crawdad\nWill try to run away during the day");
 		}
 		public override void SetDefaults()
 		{

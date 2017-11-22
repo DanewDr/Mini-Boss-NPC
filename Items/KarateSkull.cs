@@ -16,7 +16,7 @@ namespace MiniBossNPC.Items
 			item.width = 16;
 			item.height = 20;
 			item.maxStack = 20;
-			item.value = 50000;
+			item.value = 25000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;

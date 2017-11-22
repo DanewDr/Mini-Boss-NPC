@@ -8,8 +8,8 @@ namespace MiniBossNPC.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Bride head");
-			Tooltip.SetDefault("Summons the Bride");
+			DisplayName.SetDefault("Bride Head");
+			Tooltip.SetDefault("Summons the Bride\nWill try to tun away during the day");
 		}
 		public override void SetDefaults()
 		{

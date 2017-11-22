@@ -11,7 +11,7 @@ namespace MiniBossNPC.Items
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Mimic Charm");
-			Tooltip.SetDefault("Summons a Mimic");
+			Tooltip.SetDefault("Summons a Mimic\nSpawns a different Mimic depending on where you are");
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(15, 4));			
 		}
 		public override void SetDefaults()
