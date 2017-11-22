@@ -175,7 +175,12 @@ namespace MiniBossNPC.NPCs
 				nextSlot++;
 				shop.item[nextSlot].SetDefaults(mod.ItemType("SpFleshHand"));
 				nextSlot++;
-			}				
+			}
+			if (ModLoader.GetLoadedMods().Contains("Tremor"))
+			{	
+				shop.item[nextSlot].SetDefaults(mod.ItemType("TrDarkDruidSkull"));
+				nextSlot++;
+			}	
 			if (DD2Event.DownedInvasionT1)
 			{
 				shop.item[nextSlot].SetDefaults(mod.ItemType("Tiara"));
@@ -200,14 +205,41 @@ namespace MiniBossNPC.NPCs
 				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
 				{
 					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("GraniteKey"));
-					nextSlot++;
-					shop.item[nextSlot].value = 20000;				
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("MarbleKey"));
+					shop.item[nextSlot].value = 20000;	
 					nextSlot++;			
-					shop.item[nextSlot].value = 20000;				
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("MarbleKey"));
+					shop.item[nextSlot].value = 20000;	
+					nextSlot++;						
 					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("SpiritKey"));
-					nextSlot++;		
-					shop.item[nextSlot].value = 20000;				
+					shop.item[nextSlot].value = 20000;	
+					nextSlot++;					
+				}
+				if (ModLoader.GetLoadedMods().Contains("Tremor"))
+				{
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofTwilight"));
+					shop.item[nextSlot].value = 20000;	
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofSands"));
+					shop.item[nextSlot].value = 20000;	
+					nextSlot++;					
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofOcean"));
+					shop.item[nextSlot].value = 20000;	
+					nextSlot++;
+				}				
+				if (ModLoader.GetLoadedMods().Contains("ThoriumMod"))
+				{
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofFungus"));
+					shop.item[nextSlot].value = 20000;	
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofTides"));
+					shop.item[nextSlot].value = 20000;	
+					nextSlot++;					
+					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofFire"));
+					shop.item[nextSlot].value = 25000;	
+					nextSlot++;
+				}				
+				if (ModLoader.GetLoadedMods().Contains("SpiritMod"));
+				{
 					shop.item[nextSlot].SetDefaults(mod.ItemType("SpBloodyEye"));
 					nextSlot++;
 				}					
@@ -220,13 +252,12 @@ namespace MiniBossNPC.NPCs
 					nextSlot++;
 				}
 			}				
-			if (NPC.downedClown)
-				shop.item[nextSlot].SetDefaults(mod.ItemType("ClownBall"));
-				nextSlot++;
 			if (NPC.downedPirates)
 			{
 				shop.item[nextSlot].SetDefaults(mod.ItemType("PirateFlag"));
 				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CaptainsHat"));
+				nextSlot++;				
 			}
 			if (Main.hardMode)
 			{	
@@ -246,6 +277,11 @@ namespace MiniBossNPC.NPCs
 				{
 					shop.item[nextSlot].SetDefaults(mod.ItemType("SpLavaventArm"));
 					nextSlot++;
+				}
+				if (ModLoader.GetLoadedMods().Contains("Tremor"))
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("TrAlmagronBuckle"));
+					nextSlot++;
 				}					
 			}			
 			if (DD2Event.DownedInvasionT2)
@@ -256,9 +292,7 @@ namespace MiniBossNPC.NPCs
 			if (NPC.downedPlantBoss)
 			{	
 				shop.item[nextSlot].SetDefaults(mod.ItemType("MothronEgg"));
-				nextSlot++;		
-				shop.item[nextSlot].SetDefaults(mod.ItemType("KarateSkull"));
-				nextSlot++;			
+				nextSlot++;				
 				shop.item[nextSlot].SetDefaults(mod.ItemType("PaladinPlate"));
 				nextSlot++;			
 			}
@@ -292,6 +326,16 @@ namespace MiniBossNPC.NPCs
 				shop.item[nextSlot].SetDefaults(mod.ItemType("MartianCore"));
 				nextSlot++;			
 			}
+			if (NPC.downedMoonlord)
+			{				
+				if (ModLoader.GetLoadedMods().Contains("Tremor"))
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("TrViolemEye"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("TrClockHands"));
+					nextSlot++;					
+				}	
+			}				
 			if (NPC.downedBoss3)
 			{
 				shop.item[nextSlot].SetDefaults(mod.ItemType("Skully"));

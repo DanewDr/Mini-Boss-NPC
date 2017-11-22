@@ -206,7 +206,24 @@ namespace MiniBossNPC.NPCs
 				nextSlot++;
 				shop.item[nextSlot].SetDefaults(mod.ItemType("MothHead"));
 				nextSlot++;	
-			}				
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CorruptPigronWing"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CrimsonPigronWing"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("HallowedPigronWing"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CursedHammer"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CrimsonAxe"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("EnchantedSword"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("MedusaCharm"));
+				nextSlot++;				
+			}
+			if (NPC.downedClown)
+				shop.item[nextSlot].SetDefaults(mod.ItemType("ClownBall"));
+				nextSlot++;			
 			if (NPC.downedPlantBoss)
 			{	
 				shop.item[nextSlot].SetDefaults(mod.ItemType("RuneSkull"));
@@ -216,6 +233,8 @@ namespace MiniBossNPC.NPCs
 				shop.item[nextSlot].SetDefaults(mod.ItemType("TacticalSkull"));				
 				nextSlot++;
 				shop.item[nextSlot].SetDefaults(mod.ItemType("SniperSkull"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("KarateSkull"));
 				nextSlot++;					
 			}	
 		}	
