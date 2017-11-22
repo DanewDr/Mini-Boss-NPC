@@ -6,19 +6,19 @@ using Terraria.Utilities;
 
 namespace MiniBossNPC.Items
 {
-	public class SpJabberwockyHead : ModItem
+	public class TrViolemEye : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Jabberwocky Head");
-			Tooltip.SetDefault("Summons a Jabberwocky");
+			DisplayName.SetDefault("Violeum's Eye");
+			Tooltip.SetDefault("Summons a Violeum");
 		}
 		public override void SetDefaults()
 		{
-			item.width = 58;
-			item.height = 44;
+			item.width = 24;
+			item.height = 30;
 			item.maxStack = 20;
-			item.value = 30000;
+			item.value = 120000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -27,10 +27,10 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			Mod spiritMod = ModLoader.GetMod("SpiritMod");
-			if (spiritMod != null)
+			Mod tremor = ModLoader.GetMod("Tremor");
+			if (tremor != null)
 			{
-				NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, spiritMod.NPCType("JabberwockyHead"));
+				NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, tremor.NPCType("Violeum"));
 				Main.PlaySound(SoundID.Roar, player.position, 0);
 				return true;
 			}
