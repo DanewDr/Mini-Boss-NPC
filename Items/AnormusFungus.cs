@@ -1,21 +1,19 @@
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace MiniBossNPC.Items
 {
-	public class CrabClaw2 : ModItem
+	public class AnormusFungus : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Crab Claw");
-			Tooltip.SetDefault("Summons a Crawdad\nWill try to run away during the day");
+			DisplayName.SetDefault("Anormus Fungus");
+			Tooltip.SetDefault("Summons an Anomura Fungus");
 		}
 		public override void SetDefaults()
 		{
-			item.width = 22;
+			item.width = 36;
 			item.height = 20;
 			item.maxStack = 20;
 			item.value = 20000;
@@ -24,10 +22,10 @@ namespace MiniBossNPC.Items
 			item.useTime = 30;
 			item.useStyle = 4;
 			item.consumable = true;
-		}
+		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.Crawdad2);
+			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.AnomuraFungus);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}
