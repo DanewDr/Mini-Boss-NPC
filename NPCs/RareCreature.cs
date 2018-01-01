@@ -10,6 +10,7 @@ namespace MiniBossNPC.NPCs
 	[AutoloadHead]
 	public class RareCreature : ModNPC
 	{
+		public static bool shop1 = false;
 		public override string Texture
 		{
 			get
@@ -135,109 +136,139 @@ namespace MiniBossNPC.NPCs
 
 		public override void SetChatButtons(ref string button, ref string button2)
 		{
-			button = Lang.inter[28].Value;
+            button = "Shop 1";
+            button2 = "Shop 2";
 		}
 
 		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
 		{
-			if (firstButton)
-			{
-				shop = true;
-			}
+            shop1 = firstButton;
+            shop = true;
 		}
 
 		public override void SetupShop(Chest shop, ref int nextSlot)
 		{
-			shop.item[nextSlot].SetDefaults(mod.ItemType("CrabClaw"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("CrabClaw2"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("GiantShell"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("GiantShell2"));
-			nextSlot++;				
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead"));
-			nextSlot++;	
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead2"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead3"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead4"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead5"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead6"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead7"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead8"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead9"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("Pinky"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("BrideHead"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("GroomHead"));
-			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("DoctorHead"));
-			nextSlot++;
-			if (NPC.downedGoblins)
+			if (shop1)
 			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("GoblinHead"));
-				nextSlot++;	
-			}
-			if (NPC.downedBoss3)
-			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("SlimeyKey"));
-				nextSlot++;	
-			}	
-			if (Main.hardMode)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("LostHead"));
-				nextSlot++;	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("NymphHead"));
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CrabClaw"));
 				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("TimSkull"));
-				nextSlot++;	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("RainbowSlime"));
-				nextSlot++;	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("MimicCharm"));
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CrabClaw2"));
 				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("MothHead"));
-				nextSlot++;	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("CorruptPigronWing"));
+				shop.item[nextSlot].SetDefaults(mod.ItemType("GiantShell"));
 				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("CrimsonPigronWing"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("HallowedPigronWing"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("CursedHammer"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("CrimsonAxe"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("EnchantedSword"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("MedusaCharm"));
+				shop.item[nextSlot].SetDefaults(mod.ItemType("GiantShell2"));
 				nextSlot++;				
-			}
-			if (NPC.downedClown)
-				shop.item[nextSlot].SetDefaults(mod.ItemType("ClownBall"));
-				nextSlot++;			
-			if (NPC.downedPlantBoss)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("RuneSkull"));
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead"));
+				nextSlot++;	
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead2"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead3"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead4"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead5"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead6"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead7"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead8"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SalHead9"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("Pinky"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("BrideHead"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("GroomHead"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("DoctorHead"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CochinealHusk"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CyanBeetleHusk"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("LacHusk"));
 				nextSlot++;		
-				shop.item[nextSlot].SetDefaults(mod.ItemType("CommandoSkull"));
-				nextSlot++;			
-				shop.item[nextSlot].SetDefaults(mod.ItemType("TacticalSkull"));				
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("SniperSkull"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("KarateSkull"));
-				nextSlot++;					
-			}	
-		}	
+				shop.item[nextSlot].SetDefaults(mod.ItemType("MinningSkull"));
+				nextSlot++;				
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SnailShell"));
+				nextSlot++;	
+				shop.item[nextSlot].SetDefaults(mod.ItemType("SquidSac"));
+				nextSlot++;	
+				shop.item[nextSlot].SetDefaults(mod.ItemType("TombCrawlerHead"));
+				nextSlot++;				
+				if (NPC.downedGoblins)
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("GoblinHead"));
+					nextSlot++;	
+				}
+				if (NPC.downedBoss3)
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SlimeyKey"));
+					nextSlot++;	
+				}	
+				if (Main.hardMode)
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("AnormusFungus"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("DevourerHead"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("DuneSplicerHead"));
+					nextSlot++;	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("WorldFeederHead"));
+					nextSlot++;					
+					shop.item[nextSlot].SetDefaults(mod.ItemType("NymphHead"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("TimSkull"));
+					nextSlot++;	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("RainbowSlime"));
+					nextSlot++;	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("MimicCharm"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("MothHead"));
+					nextSlot++;	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("CorruptPigronWing"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("CrimsonPigronWing"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("HallowedPigronWing"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("CursedHammer"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("CrimsonAxe"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("EnchantedSword"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("MedusaCharm"));
+					nextSlot++;				
+				}
+			}
+			else 
+			{	
+				if (NPC.downedClown)
+					shop.item[nextSlot].SetDefaults(mod.ItemType("ClownBall"));
+					nextSlot++;			
+				if (NPC.downedPlantBoss)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("RuneSkull"));
+					nextSlot++;		
+					shop.item[nextSlot].SetDefaults(mod.ItemType("CommandoSkull"));
+					nextSlot++;			
+					shop.item[nextSlot].SetDefaults(mod.ItemType("TacticalSkull"));				
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SniperSkull"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("KarateSkull"));
+					nextSlot++;					
+				}
+				if (NPC.downedMartians)
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("MartianProbe"));
+					nextSlot++;	
+				}
+			}
+		}			
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)
 		{
 			damage = 20;

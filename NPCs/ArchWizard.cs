@@ -10,6 +10,7 @@ namespace MiniBossNPC.NPCs
 	[AutoloadHead]
 	public class ArchWizard : ModNPC
 	{
+        public static bool bossMini = false;		
 		public override string Texture
 		{
 			get
@@ -60,7 +61,6 @@ namespace MiniBossNPC.NPCs
 			npc.knockBackResist = 0.5f;
 			animationType = NPCID.Wizard;
 		}
-
         public override bool CanTownNPCSpawn(int numTownNPCs, int money) //Whether or not the conditions have been met for this town NPC to be able to move into town.
         {
             if (NPC.downedGoblins)  //so after the EoC is killed
@@ -154,192 +154,277 @@ namespace MiniBossNPC.NPCs
 		}
 		*/
 
-		public override void SetChatButtons(ref string button, ref string button2)
-		{
-			button = Lang.inter[28].Value;
-		}
+        public override void SetChatButtons(ref string button, ref string button2)
+        {
+            button = "Mini-Boss";
+            button2 = "Event Boss";
+        }
 
-		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
-		{
-			if (firstButton)
-			{
-				shop = true;
-			}
-		}
+        public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+        {
+            bossMini = firstButton;
+            shop = true;
+        }
 
 		public override void SetupShop(Chest shop, ref int nextSlot)
 		{
-			if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+			if (bossMini)
 			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("SpWraithHead"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("SpFleshHand"));
-				nextSlot++;
-			}
-			if (ModLoader.GetLoadedMods().Contains("Tremor"))
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("TrDarkDruidSkull"));
-				nextSlot++;
-			}	
-			if (DD2Event.DownedInvasionT1)
-			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("Tiara"));
-				nextSlot++;
-			}
-			if (Main.hardMode)
-			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("ShadowflameBattleStandard"));
-				nextSlot++;				
-				shop.item[nextSlot].SetDefaults(mod.ItemType("WyvernFeather"));
-				nextSlot++;			
-				shop.item[nextSlot].SetDefaults(mod.ItemType("FrozenHeart"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("ForbiddenCharm"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(ItemID.NightKey);
-				shop.item[nextSlot].value = 20000;				
-                nextSlot++;
-				shop.item[nextSlot].SetDefaults(ItemID.LightKey);
-				shop.item[nextSlot].value = 20000;			
-                nextSlot++;
+				if (ModLoader.GetLoadedMods().Contains("CalamityMod"))
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("CaSeahorseTail"));
+					nextSlot++;
+				}				
 				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
 				{
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("GraniteKey"));
-					shop.item[nextSlot].value = 20000;	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SpWraithHead"));
+					nextSlot++;
+				}
+				if (NPC.downedBoss3)
+				{
+					if (ModLoader.GetLoadedMods().Contains("TrueEater"))
+					{	
+						shop.item[nextSlot].SetDefaults(mod.ItemType("NiZombieHead"));
+						nextSlot++;						
+					}
+				}
+				if (Main.hardMode)
+				{
+					if (ModLoader.GetLoadedMods().Contains("CalamityMod"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("CaEarthTail"));
+						nextSlot++;
+					}					
+					shop.item[nextSlot].SetDefaults(mod.ItemType("WyvernFeather"));
 					nextSlot++;			
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("MarbleKey"));
-					shop.item[nextSlot].value = 20000;	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("FrozenHeart"));
+					nextSlot++;
+				if (ModLoader.GetLoadedMods().Contains("TrueEater"))
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("NiCorroSlime"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("NiCrimSlime"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("NiSlime"));
+					nextSlot++;					
+				}
+					shop.item[nextSlot].SetDefaults(ItemID.NightKey);
+					shop.item[nextSlot].value = 20000;				
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(ItemID.LightKey);
+					shop.item[nextSlot].value = 20000;			
+					nextSlot++;
+					if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+					{
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("GraniteKey"));
+						shop.item[nextSlot].value = 20000;	
+						nextSlot++;			
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("MarbleKey"));
+						shop.item[nextSlot].value = 20000;	
+						nextSlot++;						
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("SpiritKey"));
+						shop.item[nextSlot].value = 20000;	
+						nextSlot++;					
+					}
+					if (ModLoader.GetLoadedMods().Contains("Tremor"))
+					{
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofTwilight"));
+						shop.item[nextSlot].value = 20000;	
+						nextSlot++;
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofSands"));
+						shop.item[nextSlot].value = 20000;	
+						nextSlot++;					
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofOcean"));
+						shop.item[nextSlot].value = 20000;	
+						nextSlot++;
+					}				
+					if (ModLoader.GetLoadedMods().Contains("ThoriumMod"))
+					{
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofFungus"));
+						shop.item[nextSlot].value = 20000;	
+						nextSlot++;
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofTides"));
+						shop.item[nextSlot].value = 20000;	
+						nextSlot++;					
+						shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofFire"));
+						shop.item[nextSlot].value = 25000;	
+						nextSlot++;
+					}
+				}					
+				if (NPC.downedMechBossAny)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("DevilTail"));
 					nextSlot++;						
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("SpiritMod").ItemType("SpiritKey"));
-					shop.item[nextSlot].value = 20000;	
-					nextSlot++;					
+				}			
+				if (NPC.downedPlantBoss)
+				{				
+					shop.item[nextSlot].SetDefaults(mod.ItemType("PaladinPlate"));
+					nextSlot++;			
 				}
-				if (ModLoader.GetLoadedMods().Contains("Tremor"))
+				if (NPC.downedGolemBoss)
 				{
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofTwilight"));
-					shop.item[nextSlot].value = 20000;	
-					nextSlot++;
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofSands"));
-					shop.item[nextSlot].value = 20000;	
-					nextSlot++;					
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("Tremor").ItemType("KeyofOcean"));
-					shop.item[nextSlot].value = 20000;	
-					nextSlot++;
-				}				
-				if (ModLoader.GetLoadedMods().Contains("ThoriumMod"))
+					if (ModLoader.GetLoadedMods().Contains("CalamityMod"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("CaPlaguebringerThing"));
+						nextSlot++;
+					}
+				}
+				if (NPC.downedBoss3)
 				{
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofFungus"));
-					shop.item[nextSlot].value = 20000;	
-					nextSlot++;
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofTides"));
-					shop.item[nextSlot].value = 20000;	
-					nextSlot++;					
-					shop.item[nextSlot].SetDefaults(ModLoader.GetMod("ThoriumMod").ItemType("KeyofFire"));
-					shop.item[nextSlot].value = 25000;	
-					nextSlot++;
-				}				
-				if (ModLoader.GetLoadedMods().Contains("SpiritMod"));
-				{
-					shop.item[nextSlot].SetDefaults(mod.ItemType("SpBloodyEye"));
-					nextSlot++;
-				}					
-			}
-			if (NPC.downedFrost)
-			{
-				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
-				{
-					shop.item[nextSlot].SetDefaults(mod.ItemType("SpSnowPearl"));
+					shop.item[nextSlot].SetDefaults(mod.ItemType("Skully"));
 					nextSlot++;
 				}
-			}				
-			if (NPC.downedPirates)
-			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("PirateFlag"));
-				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("CaptainsHat"));
-				nextSlot++;				
-			}
-			if (Main.hardMode)
+			}	
+			else
 			{	
 				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
 				{
-					shop.item[nextSlot].SetDefaults(mod.ItemType("SpBabyRlyheian"));
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SpFleshHand"));
 					nextSlot++;
-					shop.item[nextSlot].SetDefaults(mod.ItemType("SpJabberwockyHead"));
-					nextSlot++;
-				}	
-			}				
-			if (NPC.downedMechBossAny)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("DevilTail"));
-				nextSlot++;	
-				if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
-				{
-					shop.item[nextSlot].SetDefaults(mod.ItemType("SpLavaventArm"));
-					nextSlot++;
-				}
+				}			
 				if (ModLoader.GetLoadedMods().Contains("Tremor"))
 				{	
-					shop.item[nextSlot].SetDefaults(mod.ItemType("TrAlmagronBuckle"));
+					shop.item[nextSlot].SetDefaults(mod.ItemType("TrDarkDruidSkull"));
 					nextSlot++;
-				}					
-			}			
-			if (DD2Event.DownedInvasionT2)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("OgreBuckle"));
-				nextSlot++;	
-			}
-			if (NPC.downedPlantBoss)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("MothronEgg"));
-				nextSlot++;				
-				shop.item[nextSlot].SetDefaults(mod.ItemType("PaladinPlate"));
-				nextSlot++;			
-			}
-			if (NPC.downedHalloweenTree)			
-			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("DeadBranch"));
-				nextSlot++;			
-			}
-			if (NPC.downedHalloweenKing)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("PumpkingButton"));
-				nextSlot++;			
-			}
-			if (NPC.downedChristmasTree)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("TreeBranch"));
-				nextSlot++;			
-			}
-			if (NPC.downedChristmasSantank)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("SantaHat"));
-				nextSlot++;		
-			}
-			if (NPC.downedChristmasIceQueen)
-			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("IceGem"));
-				nextSlot++;			
-			}
-			if (NPC.downedMartians)
-			{	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("MartianCore"));
-				nextSlot++;			
-			}
-			if (NPC.downedMoonlord)
-			{				
-				if (ModLoader.GetLoadedMods().Contains("Tremor"))
+				}
+				if (ModLoader.GetLoadedMods().Contains("TrueEater"))
 				{	
-					shop.item[nextSlot].SetDefaults(mod.ItemType("TrViolemEye"));
+					shop.item[nextSlot].SetDefaults(mod.ItemType("NiGoldenBattleStandard"));
+					nextSlot++;	
+				}					
+				if (DD2Event.DownedInvasionT1)
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("Tiara"));
 					nextSlot++;
-					shop.item[nextSlot].SetDefaults(mod.ItemType("TrClockHands"));
-					nextSlot++;					
+				}
+				if (Main.hardMode)
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("ShadowflameBattleStandard"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("ForbiddenCharm"));
+					nextSlot++;		
+					if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("SpBloodyEye"));
+						nextSlot++;
+					}
+					if (ModLoader.GetLoadedMods().Contains("CalamityMod"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("CaThiccThighs"));
+						nextSlot++;
+					}				
 				}	
-			}				
-			if (NPC.downedBoss3)
-			{
-				shop.item[nextSlot].SetDefaults(mod.ItemType("Skully"));
-				nextSlot++;
+				if (NPC.downedFrost)
+				{
+					if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("SpSnowPearl"));
+						nextSlot++;
+					}
+				}				
+				if (NPC.downedPirates)
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("PirateFlag"));
+					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("CaptainsHat"));
+					nextSlot++;				
+				}
+				if (Main.hardMode)
+				{	
+					if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("SpBabyRlyheian"));
+						nextSlot++;
+						shop.item[nextSlot].SetDefaults(mod.ItemType("SpJabberwockyHead"));
+						nextSlot++;
+					}						
+				}
+				if (NPC.downedMechBossAny)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("DevilTail"));
+					nextSlot++;	
+					if (ModLoader.GetLoadedMods().Contains("SpiritMod"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("SpLavaventArm"));
+						nextSlot++;
+					}
+					if (ModLoader.GetLoadedMods().Contains("Tremor"))
+					{	
+						shop.item[nextSlot].SetDefaults(mod.ItemType("TrAlmagronBuckle"));
+						nextSlot++;
+					}					
+				}
+				if (DD2Event.DownedInvasionT2)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("OgreBuckle"));
+					nextSlot++;	
+				}
+				if (NPC.downedPlantBoss)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("MothronEgg"));
+					nextSlot++;						
+				}
+				if (NPC.downedGolemBoss)
+				{
+					if (ModLoader.GetLoadedMods().Contains("GRealm"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("GRBarbarianHead"));
+						nextSlot++;
+					}
+				}
+				if (NPC.downedHalloweenTree)			
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("DeadBranch"));
+					nextSlot++;			
+				}	
+				if (NPC.downedHalloweenKing)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("PumpkingButton"));
+					nextSlot++;			
+				}
+				if (NPC.downedChristmasTree)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("TreeBranch"));
+					nextSlot++;			
+				}
+				if (NPC.downedChristmasSantank)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("SantaHat"));
+					nextSlot++;		
+				}
+				if (NPC.downedChristmasIceQueen)
+				{
+					shop.item[nextSlot].SetDefaults(mod.ItemType("IceGem"));
+					nextSlot++;			
+				}
+				if (NPC.downedFishron)
+				{
+					if (ModLoader.GetLoadedMods().Contains("GRealm"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("GRUndeadHead"));
+						nextSlot++;
+					}
+				}	
+				if (NPC.downedMartians)
+				{	
+					shop.item[nextSlot].SetDefaults(mod.ItemType("MartianCore"));
+					nextSlot++;			
+				}
+				if (NPC.downedMoonlord)
+				{				
+					if (ModLoader.GetLoadedMods().Contains("Tremor"))
+					{	
+						shop.item[nextSlot].SetDefaults(mod.ItemType("TrViolemEye"));
+						nextSlot++;
+						shop.item[nextSlot].SetDefaults(mod.ItemType("TrClockHands"));
+						nextSlot++;	
+					}						
+					if (ModLoader.GetLoadedMods().Contains("CalamityMod"))
+					{
+						shop.item[nextSlot].SetDefaults(mod.ItemType("GRCaBirbBeak"));
+						nextSlot++;
+					}
+				}			
 			}	
 		}	
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)
