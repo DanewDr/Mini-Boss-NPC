@@ -1,24 +1,36 @@
 Danew's Mini Boss NPC Adds A Brand New NPC To The Game: The Arch Wizard!
 He Sells Summoning Items for various Mini-Bosses And Event Bosses (So, kinda like Fargo's Mutant)
 
-Currently Supported mods: Spirit
+Currently Supported mods: Calamity, Thorium, Spirit, Tremor, GRealm and Nightmares Unleashed
 
 Since there isn't an official definition for a 'Mini Boss' most of the summon items are for enemies that can prove to be quite the challenge at the point they are fought.
 If there are any other enemies/bosses you feel need to be added be sure to let me know on the forum thread.
+Also let me know what other mods to support.
 Hope you enjoy the mod!
 
 Changelog:
+v0.2.1: Added some useless items crafted from the all the drops of each boss (one item per boss, these will be given unique effects in a future update)
+	GRealm Support (Barbarian, Undeadipede, Bumblebirb Rider)
+	Calamity Mod Support (Cnidrion, Earth Elemental, Cloud Elemental, Plagurbringer)
+	Seperated the Arch Wizard's shop into two different shops (Mini-Bosses and Event Bosses)
+	Added more summons to the RCC's shop (Anomura Fungus, Cochineal Beetle, Cyan Beetle, Devourer, Dune Splicer, Lac Beetle, Martian Probe, Undead Miner, Sea Snail, Squid, Tomb Crawler, World Feeder)
+	Removed Lost Head from RCC's shop (Instantly turns into a nymph so it was pointless having them seperate)
+	Added a second shop to the RCC
+	Nightmares Unleashed Support (Goblin King, Zombie Brute, Slimegoth, Corrgoth and Crimgoth
+
 v0.2.0: Spirit Mod support (Glade Wraith, Flesh Golem, Blood Gazer, R'lyheian, Jabberwocky, Snow Monger and Lavavent. Also added keys to the shop)
 	Added Rare Creature Collecter, an NPC that sells summons for all rare creatures: The Bride, Commando Skeleton, Crawdad (both varients), Doctor Bones, Giant Shelly (both varients), Goblin Scout, The Groom, Lost Girl (might remove later), Mimic (all varients), Moth, Nymph, Pinky, Rainbow Slime, Rune Wizard, Salamander (all varients), Dungeon Slime, Sniper Skeleton, Tactical Skeleton, Tim, Pigrons, Enchanted Weapons and Medusa
 	Tremor Mod support (Dark Druid, Almagron, Violem and Paradox Titan. Also added keys to the shop)
 	Added Pirate Captain summon to the Arch Wizard's shop
 	Thorium support (Added keys to the shop)
 	Moved Clown and Bone Lee summon to RCC's shop
+
 v0.1.2: Improved Dungeon Skull sprite
 	Added Clown spawn
 	All event/mini-bosses now spawn directly on top of the player (this should fix all despawning bugs)
 	Updated tooltips to warn the player of despawning and running away
 	Fixed martian saucer never spawning
+
 v0.1.1: Fixed changelog for previous release (oops)
 	Added new Arch Wizard quotes and removed two
 	Added new Arch Wizard name
