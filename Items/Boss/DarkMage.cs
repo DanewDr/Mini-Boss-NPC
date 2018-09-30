@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Dark Mage");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,7 +21,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.DefenderMedal, 4);
@@ -40,6 +40,6 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddTile(TileID.Anvils);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

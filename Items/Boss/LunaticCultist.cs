@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Lunatic Cultist");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,7 +21,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);		
 			recipe.AddIngredient(ItemID.BossMaskCultist, 1);
@@ -41,13 +41,17 @@ namespace MiniBossNPC.Items.Boss
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("AncientFlame"), 1);
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("AncientSpark"), 1);
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("AncientFrost"), 1);
-				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("LunaticPrimeHood"), 1);
-				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("LunaticPrimeRobe"), 1);
-				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("LunaticPrimePants"), 1);
+				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("LunaticsHood"), 1);
+				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("LunaticsRobe"), 1);
+				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("LunaticsLeggings"), 1);
+			}
+/*			if (MiniBossNPC.Calamity != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("MeldBlob"), 15);				
 			}
 			recipe.AddTile(TileID.LunarCraftingStation);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

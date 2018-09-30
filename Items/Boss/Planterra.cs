@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Plantera");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,7 +21,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.PygmyStaff, 1);
@@ -33,7 +33,7 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddIngredient(ItemID.PlanteraTrophy);
 			recipe.AddIngredient(ItemID.TheAxe);
 			recipe.AddIngredient(null, "PlanterasGuns");
-			if (MiniBossNPC.Tremor != null)
+/*			if (MiniBossNPC.Tremor != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("EssenseofJungle"), 2);
 			}
@@ -44,12 +44,17 @@ namespace MiniBossNPC.Items.Boss
 			if (MiniBossNPC.Thorium != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("BloomWeave"), 1);
-				recipe.AddIngredient(null, "Vuvuzela", 1);
+//				recipe.AddIngredient(null, "Vuvuzela", 1);
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("VerdantOrnament"), 1);			
+			}
+			if (MiniBossNPC.Calamity != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("LivingShard"), 8);
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("Knowledge25"));								
 			}
 			recipe.AddTile(TileID.MythrilAnvil);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

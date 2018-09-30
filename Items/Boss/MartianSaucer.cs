@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Martian Saucer");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,7 +21,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LaserMachinegun, 1);
@@ -34,7 +34,7 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddIngredient(ItemID.ChargedBlasterCannon);
 			recipe.AddIngredient(ItemID.MartianSaucerTrophy);
 			if (MiniBossNPC.Tremor != null)
-			{
+/*			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("MartianSprayer"), 1);
 			}
 			if (MiniBossNPC.Thorium != null)
@@ -44,9 +44,13 @@ namespace MiniBossNPC.Items.Boss
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("Triangle"));
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("SuperPlasmaCannon"));
 			}
+			if (MiniBossNPC.Calamity != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("NullificationPistol"));				
+			}
 			recipe.AddTile(TileID.MythrilAnvil);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

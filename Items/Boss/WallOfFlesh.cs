@@ -1,6 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.GameContent;
+using Terraria.IO;
+using Terraria.ObjectData;
+using Terraria.Utilities;
 using Terraria.ModLoader;
  
 namespace MiniBossNPC.Items.Boss
@@ -10,7 +19,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Wall Of Flesh");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Immunity to underworld enemies");
 		}
         public override void SetDefaults()
         {
@@ -20,8 +29,24 @@ namespace MiniBossNPC.Items.Boss
             item.rare = 1;
             item.maxStack = 1;
 			item.expert = true;
+			item.accessory = true;
         }
-		public override void AddRecipes()
+		public override void UpdateAccessory(Player player, bool hideVisual)
+		{
+			player.npcTypeNoAggro[24] = true;
+			player.npcTypeNoAggro[25] = true;
+			player.npcTypeNoAggro[39] = true;
+			player.npcTypeNoAggro[59] = true;
+			player.npcTypeNoAggro[60] = true;
+			player.npcTypeNoAggro[62] = true;
+			player.npcTypeNoAggro[66] = true;
+			player.npcTypeNoAggro[115] = true;
+			player.npcTypeNoAggro[116] = true;
+			player.npcTypeNoAggro[117] = true;
+			player.npcTypeNoAggro[151] = true;
+			player.npcTypeNoAggro[156] = true;
+		}
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LaserRifle, 1);
@@ -31,7 +56,7 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddIngredient(ItemID.ClockworkAssaultRifle);
 			recipe.AddIngredient(ItemID.Pwnhammer);
 			recipe.AddIngredient(null, "OmegaEmblem");
-			if (MiniBossNPC.Tremor != null)
+/*			if (MiniBossNPC.Tremor != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("PieceofFlesh"), 10);
 			}
@@ -41,9 +66,16 @@ namespace MiniBossNPC.Items.Boss
 				recipe.AddIngredient(MiniBossNPC.Spirit.ItemType("BallOfFlesh"), 1);
 				recipe.AddIngredient(MiniBossNPC.Spirit.ItemType("WEye"));
 			}
+			if (MiniBossNPC.Calamity != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("MLGRune"));				
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("Meowthrower"));
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("Knowledge7"));				
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("Knowledge18"));				
+			}				
 			recipe.AddTile(TileID.Anvils);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

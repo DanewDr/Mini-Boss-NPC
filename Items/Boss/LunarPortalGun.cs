@@ -11,7 +11,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Lunar Portal Gun");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -22,16 +22,20 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.PortalGun, 1);
 			recipe.AddIngredient(ItemID.LunarOre, 30);
 			recipe.AddIngredient(ItemID.SuspiciousLookingTentacle, 1);			
 			recipe.AddIngredient(ItemID.GravityGlobe);
+			if (MiniBossNPC.Spirit != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Spirit.ItemType("AccursedRelic"), 1);
+			}
 			recipe.AddTile(TileID.LunarCraftingStation);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Pumpking");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,7 +21,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.TheHorsemansBlade, 1);
@@ -34,18 +34,22 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddIngredient(ItemID.JackOLanternLauncher);
 			recipe.AddIngredient(ItemID.ExplosiveJackOLantern);
 			recipe.AddIngredient(ItemID.PumpkingTrophy);
-			if (MiniBossNPC.Tremor != null)
+/*			if (MiniBossNPC.Tremor != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("PumpkingMask"), 1);
 			}
 			if (MiniBossNPC.Thorium != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("SnackLantern"), 1);
-				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("PumpkinSickle"), 1);			
+//				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("PumpkinSickle"), 1);			
+			}
+			if (MiniBossNPC.Calamity != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("NightmareFuel"), 15);				
 			}
 			recipe.AddTile(TileID.MythrilAnvil);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

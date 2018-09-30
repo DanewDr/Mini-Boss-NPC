@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Santa-NK1");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,17 +21,17 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.EldMelter, 1);
 			recipe.AddIngredient(ItemID.ChainGun, 1);
 			recipe.AddIngredient(ItemID.SantaNK1Trophy);
-			if (MiniBossNPC.Tremor != null)
+/*			if (MiniBossNPC.Tremor != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("SantaNK1Mask"), 1);
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("SpiK3Ball"), 25);
-			}
+			}*
 			if (MiniBossNPC.Spirit != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Spirit.ItemType("Crumbler"), 1);
@@ -39,6 +39,6 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddTile(TileID.MythrilAnvil);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

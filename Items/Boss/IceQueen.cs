@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Ice Queen");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,7 +21,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.ReindeerBells, 1);
@@ -30,13 +30,17 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddIngredient(ItemID.NorthPole, 1);
 			recipe.AddIngredient(ItemID.BlizzardStaff, 1);
 			recipe.AddIngredient(ItemID.IceQueenTrophy);
-			if (MiniBossNPC.Tremor != null)
+/*			if (MiniBossNPC.Tremor != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("IceQueenMask"), 1);
+			}
+			if (MiniBossNPC.Calamity != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("EndothermicEnergy"), 30);				
 			}
 			recipe.AddTile(TileID.MythrilAnvil);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

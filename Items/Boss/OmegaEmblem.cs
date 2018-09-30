@@ -1,6 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.GameContent;
+using Terraria.IO;
+using Terraria.ObjectData;
+using Terraria.Utilities;
 using Terraria.ModLoader;
  
 namespace MiniBossNPC.Items.Boss
@@ -10,7 +19,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Omega Emblem");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("15% damage increase");
 		}
         public override void SetDefaults()
         {
@@ -20,15 +29,24 @@ namespace MiniBossNPC.Items.Boss
             item.rare = 1;
             item.maxStack = 1;
 			item.expert = true;
+			item.accessory = true;
         }
-		public override void AddRecipes()
+		public override void UpdateAccessory(Player player, bool hideVisual)
+		{
+		player.meleeDamage += .15f;
+		player.rangedDamage += .15f;
+		player.magicDamage += .15f;
+		player.minionDamage += .15f;
+		player.thrownDamage += .15f;
+		}
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.WarriorEmblem, 1);
 			recipe.AddIngredient(ItemID.RangerEmblem, 1);
 			recipe.AddIngredient(ItemID.SorcererEmblem);
 			recipe.AddIngredient(ItemID.SummonerEmblem);
-			if (MiniBossNPC.Tremor != null)
+/*			if (MiniBossNPC.Tremor != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("ThrowerEmblem"), 1);
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("AlchemistEmblem"));
@@ -46,6 +64,6 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddTile(TileID.Anvils);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

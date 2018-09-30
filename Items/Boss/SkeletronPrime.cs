@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("SkeletronPrime");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,7 +21,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.HallowedBar, 10);
@@ -30,12 +30,12 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddIngredient(ItemID.MechanicalBatteryPiece);
 			recipe.AddIngredient(ItemID.DestroyerTrophy);
 			if (MiniBossNPC.Tremor != null)
-			{
+/*			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("PrimeBlade"), 1);
 			}
 			if (MiniBossNPC.Spirit != null)
 			{
-				recipe.AddIngredient(MiniBossNPC.Spirit.ItemType("SkeleV"), 1);
+				recipe.AddIngredient(MiniBossNPC.Spirit.ItemType("SkellyV"), 1);
 				recipe.AddIngredient(MiniBossNPC.Spirit.ItemType("PrintPrime"), 2);
 			}
 			if (MiniBossNPC.Thorium != null)
@@ -43,9 +43,14 @@ namespace MiniBossNPC.Items.Boss
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("StrangePlating"), 5);
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("LifeCell"), 5);
 			}
+			if (MiniBossNPC.Calamity != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("Knowledge23"));
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("Knowledge20"));							
+			}
 			recipe.AddTile(TileID.MythrilAnvil);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

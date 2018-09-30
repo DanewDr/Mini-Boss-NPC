@@ -11,7 +11,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Vuvuzela");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(15, 4));			
 		}
         public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			if (MiniBossNPC.Thorium != null)
 			{
@@ -36,6 +36,6 @@ namespace MiniBossNPC.Items.Boss
 				recipe.SetResult(this);
 				recipe.AddRecipe();
 			}	
-		}
+		}*/
     }
 }

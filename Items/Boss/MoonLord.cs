@@ -11,7 +11,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Moon Lord");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -22,7 +22,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Terrarian, 1);
@@ -35,22 +35,23 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddIngredient(ItemID.RainbowCrystalStaff);		
 			recipe.AddIngredient(ItemID.BossMaskMoonlord, 1);
 			recipe.AddIngredient(ItemID.MoonLordTrophy);
+			recipe.AddIngredient(null, "LunarPortalGun");
 			if (MiniBossNPC.Tremor != null)
-			{
+/*			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("MultidimensionalFragment"), 2);
-			}
-			if (MiniBossNPC.Spirit != null)
-			{
-				recipe.AddIngredient(MiniBossNPC.Spirit.ItemType("AccursedRelic"), 1);
 			}
 			if (MiniBossNPC.Thorium != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("LifeAndDeath"), 1);
 				recipe.AddIngredient(MiniBossNPC.Thorium.ItemType("SonicAmplifier"), 1);			
 			}
+			if (MiniBossNPC.Calamity != null)
+			{
+				recipe.AddIngredient(MiniBossNPC.Calamity.ItemType("MLGRune2"));				
+			}
 			recipe.AddTile(TileID.LunarCraftingStation);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }

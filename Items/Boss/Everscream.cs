@@ -10,7 +10,7 @@ namespace MiniBossNPC.Items.Boss
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Everscream");
-			Tooltip.SetDefault("");
+			Tooltip.SetDefault("Currently Does Nothing");
 		}
         public override void SetDefaults()
         {
@@ -21,7 +21,7 @@ namespace MiniBossNPC.Items.Boss
             item.maxStack = 1;
 			item.expert = true;
         }
-		public override void AddRecipes()
+/*		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.FestiveWings, 1);
@@ -29,7 +29,7 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddIngredient(ItemID.ChristmasHook, 1);
 			recipe.AddIngredient(ItemID.Razorpine, 1);
 			recipe.AddIngredient(ItemID.EverscreamTrophy);
-			if (MiniBossNPC.Tremor != null)
+/*			if (MiniBossNPC.Tremor != null)
 			{
 				recipe.AddIngredient(MiniBossNPC.Tremor.ItemType("EverscreamMask"), 1);
 			}
@@ -40,6 +40,6 @@ namespace MiniBossNPC.Items.Boss
 			recipe.AddTile(TileID.MythrilAnvil);			
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-		}
+		}*/
     }
 }
