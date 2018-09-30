@@ -6,19 +6,19 @@ using Terraria.Utilities;
 
 namespace MiniBossNPC.Items
 {
-	public class GRUndeadHead : ModItem
+	public class CaColossalSac : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Undeadipede Head");
-			Tooltip.SetDefault("Summons a Undeadipede");
+			DisplayName.SetDefault("Colossal Sac");
+			Tooltip.SetDefault("Summons a Colossal Squid");
 		}
 		public override void SetDefaults()
 		{
-			item.width = 26;
-			item.height = 22;
+			item.width = 80;
+			item.height = 108;
 			item.maxStack = 20;
-			item.value = 240000;
+			item.value = 340000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -27,10 +27,10 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			Mod gRealm = ModLoader.GetMod("GRealm");
-			if (gRealm != null)
+			Mod calamityMod = ModLoader.GetMod("CalamityMod");
+			if (calamityMod != null)
 			{
-				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, gRealm.NPCType("UndeadipedeHead"));
+				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, calamityMod.NPCType("ColossalSquid"));
 				Main.PlaySound(SoundID.Roar, player.position, 0);
 				return true;
 			}

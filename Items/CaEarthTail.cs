@@ -10,15 +10,15 @@ namespace MiniBossNPC.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Earth Tail");
+			DisplayName.SetDefault("Earth Helemet");
 			Tooltip.SetDefault("Summons an Earth Elemental");
 		}
 		public override void SetDefaults()
 		{
-			item.width = 58;
-			item.height = 44;
+			item.width = 70;
+			item.height = 108;
 			item.maxStack = 20;
-			item.value = 30000;
+			item.value = 92000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -30,7 +30,7 @@ namespace MiniBossNPC.Items
 			Mod calamityMod = ModLoader.GetMod("CalamityMod");
 			if (calamityMod != null)
 			{
-				NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, calamityMod.NPCType("Horse"));
+				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, calamityMod.NPCType("Horse"));
 				Main.PlaySound(SoundID.Roar, player.position, 0);
 				return true;
 			}

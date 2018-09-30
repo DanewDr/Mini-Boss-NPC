@@ -4,19 +4,19 @@ using Terraria.ModLoader;
 
 namespace MiniBossNPC.Items
 {
-	public class DevourerHead : ModItem
+	public class Digger : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Devourer Head");
-			Tooltip.SetDefault("Summons a Devourer");
+			DisplayName.SetDefault("Digger Head");
+			Tooltip.SetDefault("Summons a Digger");
 		}
 		public override void SetDefaults()
 		{
 			item.width = 30;
-			item.height = 38;
+			item.height = 36;
 			item.maxStack = 20;
-			item.value = 100;
+			item.value = 1;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -25,7 +25,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, NPCID.DevourerHead);
+			NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, NPCID.DiggerHead);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

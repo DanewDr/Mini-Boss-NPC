@@ -25,7 +25,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.LostGirl);
+			NPC.NewNPC((int)player.Center.X - 500, (int)player.Center.Y, NPCID.LostGirl);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}
