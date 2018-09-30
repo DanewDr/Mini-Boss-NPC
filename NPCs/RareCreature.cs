@@ -84,7 +84,7 @@ namespace MiniBossNPC.NPCs
 				case 1:
 					return "Benicio del Toro";
 				case 2:
-					return "Grevious";
+					return "Grievous";
 				default:
 					return "Totally not recoloured Dye Trader";
 			}
@@ -113,7 +113,7 @@ namespace MiniBossNPC.NPCs
 			int witchDoctor = NPC.FindFirstNPC(NPCID.WitchDoctor);
 			if (witchDoctor >= 0 && Main.rand.Next (7) == 0)
 			{
-				return "That " + Main.npc[witchDoctor].GivenName + " would make a fine addition to my collection.";
+				return "That " + Main.npc[witchDoctor].GivenName + " would make a fine addition to my collection.... sorry what were you saying?";
 			}		
 			switch (Main.rand.Next(6))
 			{
@@ -152,7 +152,7 @@ namespace MiniBossNPC.NPCs
 			{
 				shop.item[nextSlot].SetDefaults(mod.ItemType("CrabClaw"));
 				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("CrabClaw2"));
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CrabClaw2"));			
 				nextSlot++;
 				shop.item[nextSlot].SetDefaults(mod.ItemType("GiantShell"));
 				nextSlot++;
@@ -184,7 +184,7 @@ namespace MiniBossNPC.NPCs
 				nextSlot++;
 				shop.item[nextSlot].SetDefaults(mod.ItemType("DoctorHead"));
 				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("CochinealHusk"));
+				shop.item[nextSlot].SetDefaults(mod.ItemType("CochinealHusk"));	
 				nextSlot++;
 				shop.item[nextSlot].SetDefaults(mod.ItemType("CyanBeetleHusk"));
 				nextSlot++;
@@ -195,9 +195,13 @@ namespace MiniBossNPC.NPCs
 				shop.item[nextSlot].SetDefaults(mod.ItemType("SnailShell"));
 				nextSlot++;	
 				shop.item[nextSlot].SetDefaults(mod.ItemType("SquidSac"));
-				nextSlot++;	
-				shop.item[nextSlot].SetDefaults(mod.ItemType("TombCrawlerHead"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("GiantWorm"));
 				nextSlot++;				
+				shop.item[nextSlot].SetDefaults(mod.ItemType("DevourerHead"));
+				nextSlot++;
+				shop.item[nextSlot].SetDefaults(mod.ItemType("TombCrawlerHead"));
+				nextSlot++;
 				if (NPC.downedGoblins)
 				{
 					shop.item[nextSlot].SetDefaults(mod.ItemType("GoblinHead"));
@@ -212,8 +216,8 @@ namespace MiniBossNPC.NPCs
 				{
 					shop.item[nextSlot].SetDefaults(mod.ItemType("AnormusFungus"));
 					nextSlot++;
-					shop.item[nextSlot].SetDefaults(mod.ItemType("DevourerHead"));
-					nextSlot++;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("Digger"));
+					nextSlot++;				
 					shop.item[nextSlot].SetDefaults(mod.ItemType("DuneSplicerHead"));
 					nextSlot++;	
 					shop.item[nextSlot].SetDefaults(mod.ItemType("WorldFeederHead"));
@@ -234,6 +238,12 @@ namespace MiniBossNPC.NPCs
 					nextSlot++;
 					shop.item[nextSlot].SetDefaults(mod.ItemType("HallowedPigronWing"));
 					nextSlot++;
+				}
+			}
+			else 
+			{
+				if (Main.hardMode)
+				{
 					shop.item[nextSlot].SetDefaults(mod.ItemType("CursedHammer"));
 					nextSlot++;
 					shop.item[nextSlot].SetDefaults(mod.ItemType("CrimsonAxe"));
@@ -241,11 +251,8 @@ namespace MiniBossNPC.NPCs
 					shop.item[nextSlot].SetDefaults(mod.ItemType("EnchantedSword"));
 					nextSlot++;
 					shop.item[nextSlot].SetDefaults(mod.ItemType("MedusaCharm"));
-					nextSlot++;				
-				}
-			}
-			else 
-			{	
+					nextSlot++;	
+				}					
 				if (NPC.downedClown)
 					shop.item[nextSlot].SetDefaults(mod.ItemType("ClownBall"));
 					nextSlot++;			
@@ -255,7 +262,7 @@ namespace MiniBossNPC.NPCs
 					nextSlot++;		
 					shop.item[nextSlot].SetDefaults(mod.ItemType("CommandoSkull"));
 					nextSlot++;			
-					shop.item[nextSlot].SetDefaults(mod.ItemType("TacticalSkull"));				
+					shop.item[nextSlot].SetDefaults(mod.ItemType("TacticalSkull"));
 					nextSlot++;
 					shop.item[nextSlot].SetDefaults(mod.ItemType("SniperSkull"));
 					nextSlot++;
