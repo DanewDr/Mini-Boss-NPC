@@ -11,7 +11,7 @@ namespace MiniBossNPC
 		public static Mod Tremor;
 		public static Mod Thorium;
 		public static Mod Spirit;
-		public static Mod calamityLoaded;
+		public static Mod Calamity;
 
 		public MiniBossNPC()
 		{
@@ -27,7 +27,7 @@ namespace MiniBossNPC
 			Tremor = ModLoader.GetMod("Tremor");
 			Thorium = ModLoader.GetMod("ThoriumMod");
 			Spirit = ModLoader.GetMod("SpiritMod");
-			calamityLoaded = ModLoader.GetMod("CalamityMod");
+			Calamity = ModLoader.GetMod("CalamityMod");
 		}		
 	}
 }
