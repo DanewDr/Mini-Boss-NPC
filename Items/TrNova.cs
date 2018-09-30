@@ -6,19 +6,19 @@ using Terraria.Utilities;
 
 namespace MiniBossNPC.Items
 {
-	public class TrViolemEye : ModItem
+	public class TrNova : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Violeum's Eye");
-			Tooltip.SetDefault("Summons a Violeum");
+			DisplayName.SetDefault("Nova Idol");
+			Tooltip.SetDefault("Summons an Nova\nWARNING: SUMMONS MOON LORD ON DEATH");
 		}
 		public override void SetDefaults()
 		{
-			item.width = 24;
+			item.width = 26;
 			item.height = 30;
 			item.maxStack = 20;
-			item.value = 18000;
+			item.value = 20000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -30,7 +30,7 @@ namespace MiniBossNPC.Items
 			Mod tremor = ModLoader.GetMod("Tremor");
 			if (tremor != null)
 			{
-				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, tremor.NPCType("Violeum"));
+				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, tremor.NPCType("NovaPillar"));
 				Main.PlaySound(SoundID.Roar, player.position, 0);
 				return true;
 			}
