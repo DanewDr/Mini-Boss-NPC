@@ -18,7 +18,7 @@ namespace MiniBossNPC.Items
 			item.width = 16;
 			item.height = 48;
 			item.maxStack = 20;
-			item.value = 130000;
+			item.value = 300000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -30,7 +30,7 @@ namespace MiniBossNPC.Items
 			Mod tremor = ModLoader.GetMod("Tremor");
 			if (tremor != null)
 			{
-				NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, tremor.NPCType("Titan"));
+				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, tremor.NPCType("Titan"));
 				Main.PlaySound(SoundID.Roar, player.position, 0);
 				return true;
 			}

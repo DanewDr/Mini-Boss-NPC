@@ -18,7 +18,7 @@ namespace MiniBossNPC.Items
 			item.width = 25;
 			item.height = 36;
 			item.maxStack = 20;
-			item.value = 35000;
+			item.value = 37000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -30,7 +30,7 @@ namespace MiniBossNPC.Items
 			Mod spiritMod = ModLoader.GetMod("SpiritMod");
 			if (spiritMod != null)
 			{
-				NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, spiritMod.NPCType("SulfurElemental"));
+				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, spiritMod.NPCType("SulfurElemental"));
 				Main.PlaySound(SoundID.Roar, player.position, 0);
 				return true;
 			}

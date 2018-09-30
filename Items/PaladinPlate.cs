@@ -17,7 +17,7 @@ namespace MiniBossNPC.Items
 			item.width = 24;
 			item.height = 22;
 			item.maxStack = 20;
-			item.value = 50000;
+			item.value = 170000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -26,7 +26,7 @@ namespace MiniBossNPC.Items
 		}		
 		public override bool UseItem(Player player)
 		{
-			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.Paladin);
+			NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, NPCID.Paladin);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;
 		}

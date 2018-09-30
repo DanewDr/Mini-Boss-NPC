@@ -15,10 +15,10 @@ namespace MiniBossNPC.Items
 		}
 		public override void SetDefaults()
 		{
-			item.width = 46;
-			item.height = 34;
+			item.width = 44;
+			item.height = 30;
 			item.maxStack = 20;
-			item.value = 30000;
+			item.value = 500;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -30,7 +30,7 @@ namespace MiniBossNPC.Items
 			Mod trueEater = ModLoader.GetMod("TrueEater");
 			if (trueEater != null)
 			{
-				NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, trueEater.NPCType("Crimgoth"));
+				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, trueEater.NPCType("Crimgoth"));
 				Main.PlaySound(SoundID.Roar, player.position, 0);
 				return true;
 			}

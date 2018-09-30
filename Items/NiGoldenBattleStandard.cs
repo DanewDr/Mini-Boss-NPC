@@ -15,10 +15,10 @@ namespace MiniBossNPC.Items
 		}
 		public override void SetDefaults()
 		{
-			item.width = 46;
-			item.height = 34;
+			item.width = 32;
+			item.height = 32;
 			item.maxStack = 20;
-			item.value = 30000;
+			item.value = 280000;
 			item.rare = 1;
 			item.useAnimation = 30;
 			item.useTime = 30;
@@ -30,7 +30,7 @@ namespace MiniBossNPC.Items
 			Mod trueEater = ModLoader.GetMod("TrueEater");
 			if (trueEater != null)
 			{
-				NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, trueEater.NPCType("GoblinKing"));
+				NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, trueEater.NPCType("GoblinKing"));
 				Main.PlaySound(SoundID.Roar, player.position, 0);
 				return true;
 			}

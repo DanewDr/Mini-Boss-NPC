@@ -28,7 +28,7 @@ namespace MiniBossNPC.Items
 		}
 		public override bool UseItem(Player player)
 		{
-			NPC.NewNPC((int)player.Center.X, (int)player.Center.Y, NPCID.RainbowSlime);
+			NPC.NewNPC((int)player.Center.X - 100, (int)player.Center.Y, NPCID.RainbowSlime);
 			Main.PlaySound(SoundID.Roar, player.position, 0);
 			return true;	
 		}
