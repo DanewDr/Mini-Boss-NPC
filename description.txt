@@ -12,7 +12,7 @@ Changelog:
 v0.2.2: Updated Calamity support (Abyss mini-bosses, "new" Earth Elemental, new Cnidrion, Great Sand Shark)
 	Added new DD2 mini-boss summons (Betsy, tier 3 Dark Mage and tier 3 Ogre)
 	Added new rare creatures (Digger and Giant Worm)
-	Added piller summons
+	Added pillar summons
 	Arch Wizard now sells the Tiara if tier 2 Old One's army is defeated but not tier 1
 	New Arch Wizard sprite
 	Updated icon to have new Arch Wizard sprite
