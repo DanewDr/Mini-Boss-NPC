@@ -410,7 +410,7 @@ namespace MiniBossNPC.NPCs
 					shop.item[nextSlot].SetDefaults(mod.ItemType("IceGem"));
 					nextSlot++;			
 				}
-				if (DD2Event.DownedInvasionT2)
+				if (DD2Event.DownedInvasionT3)
 				{
 					shop.item[nextSlot].SetDefaults(mod.ItemType("Tier3Tiara"));
 					nextSlot++;					
