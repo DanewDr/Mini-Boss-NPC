@@ -9,6 +9,7 @@ Also let me know what other mods to support.
 Hope you enjoy the mod!
 
 Changelog:
+v0.2.2.1: Fixed Old One's army summons being sold incorrectly
 v0.2.2: Updated Calamity support (Abyss mini-bosses, "new" Earth Elemental, new Cnidrion, Great Sand Shark)
 	Added new DD2 mini-boss summons (Betsy, tier 3 Dark Mage and tier 3 Ogre)
 	Added new rare creatures (Digger and Giant Worm)
